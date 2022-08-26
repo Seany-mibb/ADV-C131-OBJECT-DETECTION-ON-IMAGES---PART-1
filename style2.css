@@ -1,0 +1,92 @@
+
+.heading
+{
+font-size: 23px;
+width: 100%;
+margin: 0px;
+}
+
+#status
+{
+font-size: 18px;
+}
+
+body{
+    background-size:cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+canvas
+{
+    border:ridge;
+    border-width: 10px;
+    animation-name: glow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #f0ffbf 0%, #a7d69f  51%, #f0ffbf  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    color:darkcyan;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: lightcoral;
+    text-decoration: none;
+  }
+
+           
+  .btn-grad2 {
+    background-image: linear-gradient(to right, #EDE574 0%, #E1F5C4  51%, #EDE574  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    width:35%;
+    color:skyblue;
+  }
+
+  .btn-grad2:hover {
+    background-position: right center;
+    text-decoration: none;
+    width:50%
+  }
+ 
+ 
+
+@keyframes glow
+{
+    from
+    {
+        box-shadow: 5px 5px 5px cyan;
+    }
+
+    50%
+    {
+        box-shadow: -5px -5px 5px crimson;
+    }
+
+    to
+    {
+        box-shadow: 5px 5px 5px cyan;
+    }
+}
