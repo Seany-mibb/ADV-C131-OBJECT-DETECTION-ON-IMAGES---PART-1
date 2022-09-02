@@ -1,4 +1,6 @@
 img = "";
+Status = '';
+object = [];
 
 function preload()
 {
@@ -18,13 +20,22 @@ function draw()
 {
     image(img, 0, 0, 640, 420);
 
-    fill("#ff0000")
-    textSize(18);
-    textFont("Segoe UI")
-    text("Laptop", 400, 77);
-    noFill();
-    stroke("#ff0000");
-    rect(120,60,500, 350);
+    if(Status != '')
+    {
+        for(i = 0; i < object.length; i++)
+        {
+            document.getElementById("status").innerHTML = "Status: Objects Detected";
+            percent = floor(object[i].confidence * 100)
+            fill("#ff0000")
+            textSize(18);
+            textFont("Segoe UI")
+            text(object[i].label + " " + percent + "%", object[i].x, object[i].y);
+            noFill();
+            stroke("#ff0000")
+            rect(object[i].x, object[i].y, object[i].width, object[i].height);
+            
+        }
+    }
 }
 
 function modelLoaded()
@@ -42,6 +53,7 @@ function gotResult(error, results)
     }
     
     console.log(results);
+    object = results;
 }
 
 function back()
